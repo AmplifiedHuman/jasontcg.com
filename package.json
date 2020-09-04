@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-tailwind",
-  "description": "Gatsby starter styled with Tailwind",
-  "version": "4.0.0",
-  "author": "Taylor Bryant <taylor@bryant.io>",
+  "name": "personal-website",
+  "description": "A personal website developed using Gatsby",
+  "version": "1.0.0",
+  "author": "Jason Tee <cheeguantee@gmail.com>",
   "dependencies": {
     "gatsby": "2.24.47",
     "gatsby-plugin-manifest": "2.4.27",
@@ -21,7 +21,6 @@
     "tailwindcss",
     "purgecss"
   ],
-  "license": "MIT",
   "scripts": {
     "analyze:lint": "eslint --ext .jsx --ext .js .",
     "analyze:prettier": "prettier --list-different \"**/*.{css,js,jsx,json,md}\"",
@@ -34,8 +33,7 @@
     "dev": "npm run develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "0.2.1",
@@ -52,9 +50,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind"
-  },
-  "bugs": {
-    "url": "https://github.com/taylorbryant/gatsby-starter-tailwind/issues"
+    "url": "https://github.com/AmplifiedHuman/personal-website"
   }
 }
