@@ -1,11 +1,11 @@
-const resolveConfig = require("tailwindcss/resolveConfig");
-const tailwindConfig = require("./tailwind.config.js");
+const resolveConfig = require('tailwindcss/resolveConfig');
+const tailwindConfig = require('./tailwind.config.js');
 
 const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Jason Tee`,
+    title: `Jason 🐳`,
     description: `A personal website developed using Gatsby`,
     author: `Jason Tee`,
   },
@@ -19,7 +19,7 @@ module.exports = {
         short_name: `personal-website`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal['400'],
+        theme_color: fullConfig.theme.colors.black,
         display: `minimal-ui`,
         icon: `src/images/tailwind-icon.png`,
       },
@@ -37,5 +37,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 };

@@ -1,8 +1,41 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
-import React, { useState } from "react";
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import 'hover.css';
 
-function Header() {
+// styled components
+const StyledHeader = styled.header.attrs({
+  className: 'bg-white px-4 py-2',
+})``;
+
+const StyledHeaderContainer = styled.div.attrs({
+  className:
+    'flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-4',
+})``;
+
+const StyledNav = styled.nav.attrs({
+  className: 'md:block md:items-center w-full md:w-auto',
+})``;
+
+const Header = () => {
+  // hooks
   const [isExpanded, toggleExpansion] = useState(false);
+  // routes
+  const routes = [
+    {
+      route: `/about`,
+      title: `About`,
+    },
+    {
+      route: `/`,
+      title: `Projects`,
+    },
+    {
+      route: `/`,
+      title: `Contact`,
+    },
+  ];
+  // static query
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -14,62 +47,37 @@ function Header() {
   `);
 
   return (
-    <header className="bg-teal-700">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
-        <Link to="/">
-          <h1 className="flex items-center text-white no-underline">
-            <svg
-              className="w-8 h-8 mr-2 fill-current"
-              height="54"
-              viewBox="0 0 54 54"
-              width="54"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-            </svg>
-            <span className="text-xl font-bold tracking-tight">
-              {site.siteMetadata.title}
-            </span>
-          </h1>
+    <StyledHeader>
+      <StyledHeaderContainer>
+        <Link to='/' className='hover:text-black hvr-grow'>
+          <h1 className='text-2xl'>{site.siteMetadata.title}</h1>
         </Link>
 
         <button
-          className="items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className='items-center block px-3 py-2 text-black rounded md:hidden'
           onClick={() => toggleExpansion(!isExpanded)}
         >
-          <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          <svg viewBox='0 0 100 80' width='30' height='30'>
+            <rect width='100' height='20'></rect>
+            <rect y='30' width='100' height='20'></rect>
+            <rect y='60' width='100' height='20'></rect>
           </svg>
         </button>
 
-        <nav
-          className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:items-center w-full md:w-auto`}
-        >
-          {[
-            {
-              route: `/about`,
-              title: `About`,
-            },
-          ].map((link) => (
+        <StyledNav className={`${isExpanded ? `block` : `hidden`}`}>
+          {routes.map((link) => (
             <Link
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+              className='block mt-4 no-underline md:inline-block md:mt-0 md:ml-6'
               key={link.title}
               to={link.route}
             >
               {link.title}
             </Link>
           ))}
-        </nav>
-      </div>
-    </header>
+        </StyledNav>
+      </StyledHeaderContainer>
+    </StyledHeader>
   );
-}
+};
 
 export default Header;

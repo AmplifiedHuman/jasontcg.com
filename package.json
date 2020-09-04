@@ -4,16 +4,24 @@
   "version": "1.0.0",
   "author": "Jason Tee <cheeguantee@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "2.24.47",
     "gatsby-plugin-manifest": "2.4.27",
     "gatsby-plugin-offline": "3.2.26",
     "gatsby-plugin-postcss": "2.3.11",
     "gatsby-plugin-react-helmet": "3.3.10",
     "gatsby-plugin-sharp": "2.6.31",
+    "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-plugin-typography": "^2.5.10",
+    "hover.css": "^2.3.2",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "6.1.0"
+    "react-helmet": "6.1.0",
+    "react-typography": "^0.16.19",
+    "styled-components": "^5.1.1",
+    "typography": "^0.16.19",
+    "typography-theme-funston": "^0.16.19"
   },
   "keywords": [
     "gatsby",
