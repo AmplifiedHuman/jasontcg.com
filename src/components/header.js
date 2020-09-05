@@ -5,12 +5,16 @@ import 'hover.css';
 
 // styled components
 const StyledHeader = styled.header.attrs({
-  className: 'bg-white px-4 py-2',
+  className: 'bg-white',
 })``;
 
 const StyledHeaderContainer = styled.div.attrs({
   className:
-    'flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-4',
+    'flex flex-wrap items-center justify-between max-w-3xl p-4 mx-auto md:p-8',
+})``;
+
+const StyledLink = styled(Link).attrs({
+  className: 'block mt-4 no-underline md:inline-block md:mt-0 md:ml-6',
 })``;
 
 const StyledNav = styled.nav.attrs({
@@ -66,13 +70,9 @@ const Header = () => {
 
         <StyledNav className={`${isExpanded ? `block` : `hidden`}`}>
           {routes.map((link) => (
-            <Link
-              className='block mt-4 no-underline md:inline-block md:mt-0 md:ml-6'
-              key={link.title}
-              to={link.route}
-            >
+            <StyledLink key={link.title} to={link.route}>
               {link.title}
-            </Link>
+            </StyledLink>
           ))}
         </StyledNav>
       </StyledHeaderContainer>

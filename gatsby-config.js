@@ -44,5 +44,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `site-data`,
+        path: `./src/data/`,
+      },
+    },
   ],
 };

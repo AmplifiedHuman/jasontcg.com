@@ -3,33 +3,36 @@ import React from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import Welcome from "../components/Welcome";
 
 function IndexPage() {
   return (
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Home"
+        title='Home'
       />
 
-      <section className="text-center">
+      <Welcome />
+
+      <section className='text-center'>
         <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
+          alt='Cat and human sitting on a couch'
+          className='block w-1/2 mx-auto mb-8'
           src={catAndHumanIllustration}
         />
 
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
+        <h2 className='inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400'>
           Hey there! Welcome to your first Gatsby site.
         </h2>
 
-        <p className="leading-loose">
+        <p className='leading-loose'>
           This is a barebones starter for Gatsby styled using{` `}
           <a
-            className="font-bold text-gray-900 no-underline"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
+            className='font-bold text-gray-900 no-underline'
+            href='https://tailwindcss.com/'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             Tailwind CSS
           </a>

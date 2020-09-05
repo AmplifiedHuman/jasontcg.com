@@ -6,11 +6,11 @@ import Footer from './Footer';
 
 // styled components
 const StyledLayout = styled.div.attrs({
-  className: 'flex flex-col min-h-screen font-sans text-gray-900',
+  className: 'flex flex-col min-h-screen text-gray-900',
 })``;
 
 const StyledMainContainer = styled.main.attrs({
-  className: 'flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16',
+  className: 'flex-1 w-full max-w-3xl px-4 py-8 mx-auto md:px-8 md:py-16',
 })``;
 
 function Layout({ children }) {
