@@ -1,0 +1,30 @@
+[
+  {
+    "category": "Web 🕸",
+    "skills": [
+      "React.js",
+      "Node.js",
+      "PHP",
+      "Spring Boot",
+      "GraphQL / REST APIs"
+    ],
+    "style": "text-gray-700 bg-gray-200"
+  },
+  {
+    "category": "Programming 💻",
+    "skills": [
+      "Java (Spring, Maven, Hibernate)",
+      "C (CUnit, Valgrind Autotools)",
+      "Javascript",
+      "Python",
+      "Bash",
+      "Scheme"
+    ],
+    "style": "bg-blue-200 text-blue-800"
+  },
+  {
+    "category": "Databases ☁️",
+    "skills": ["MySQL", "Postgres"],
+    "style": "bg-indigo-200 text-indigo-800"
+  }
+]
