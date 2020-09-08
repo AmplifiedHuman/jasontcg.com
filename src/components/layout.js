@@ -10,7 +10,7 @@ const StyledLayout = styled.div.attrs({
 })``;
 
 const StyledMainContainer = styled.main.attrs({
-  className: 'flex-1 w-full max-w-3xl px-4 py-8 mx-auto md:px-8 md:py-16',
+  className: 'flex-1 w-full max-w-3xl px-4 pt-8 mx-auto md:px-8 md:pt-16',
 })``;
 
 function Layout({ children }) {

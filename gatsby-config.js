@@ -1,6 +1,6 @@
 const resolveConfig = require('tailwindcss/resolveConfig');
 const tailwindConfig = require('./tailwind.config.js');
-
+require('dotenv').config();
 const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
@@ -59,6 +59,18 @@ module.exports = {
       options: {
         name: `images`,
         path: `./src/images/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'GitHub',
+        fieldName: 'github',
+        url: 'https://api.github.com/graphql',
+        headers: {
+          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+        },
+        fetchOptions: {},
       },
     },
   ],

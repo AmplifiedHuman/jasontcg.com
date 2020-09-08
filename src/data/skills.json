@@ -18,13 +18,14 @@
       "Javascript",
       "Python",
       "Bash",
-      "Scheme"
+      "Scheme",
+      "R"
     ],
     "style": "bg-blue-200 text-blue-800"
   },
   {
-    "category": "Databases ☁️",
-    "skills": ["MySQL", "Postgres"],
+    "category": "Tools ⚙️",
+    "skills": ["MySQL", "Postgres", "Linux", "Docker"],
     "style": "bg-indigo-200 text-indigo-800"
   }
 ]

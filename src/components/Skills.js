@@ -9,7 +9,7 @@ const StyledPill = styled.span.attrs({
 })``;
 
 const StyledSkills = styled.div.attrs({
-  className: 'mb-16 md:mb-32',
+  className: 'mb-12 md:mb-20',
 })``;
 
 const Skills = () => {
