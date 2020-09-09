@@ -66,7 +66,8 @@ const ProjectCard = ({ project }) => {
               src={GithubIcon}
               width='25'
               height='25'
-              className='my-0 ml-2 opacity-75'
+              className='my-0 ml-2 opacity-75 w-full h-full'
+              style={{ width: '25px', height: '25px' }}
               alt='Github Logo'
             />
           </a>
