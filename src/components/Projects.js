@@ -199,7 +199,7 @@ const Projects = () => {
     }
   `);
   return (
-    <div className='mb-12 md:mb-20'>
+    <div className='mb-12 md:mb-20' id='projects'>
       <StyledHeader>Projects</StyledHeader>
       <StyledProjects>
         {edges.map(({ node }) => {

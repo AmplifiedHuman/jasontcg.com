@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 // styled components
 const StyledHeader = styled.header.attrs({
@@ -12,8 +13,9 @@ const StyledHeaderContainer = styled.div.attrs({
     'flex flex-wrap items-center justify-between max-w-3xl p-4 mx-auto md:p-8',
 })``;
 
-const StyledLink = styled(Link).attrs({
-  className: 'block mt-4 no-underline md:inline-block md:mt-0 md:ml-6 transition duration-300 hover:text-blue-500',
+const StyledLink = styled(AnchorLink).attrs({
+  className:
+    'block mt-4 no-underline md:inline-block md:mt-0 md:ml-6 transition duration-300 hover:text-blue-500 cursor-pointer',
 })``;
 
 const StyledNav = styled.nav.attrs({
@@ -26,15 +28,15 @@ const Header = () => {
   // routes
   const routes = [
     {
-      route: `/about`,
-      title: `About`,
-    },
-    {
-      route: `/`,
+      route: `#projects`,
       title: `Projects`,
     },
     {
-      route: `/`,
+      route: `#about`,
+      title: `About`,
+    },
+    {
+      route: `#contact`,
       title: `Contact`,
     },
   ];
@@ -72,7 +74,7 @@ const Header = () => {
 
         <StyledNav className={`${isExpanded ? `block` : `hidden`}`}>
           {routes.map((link) => (
-            <StyledLink key={link.title} to={link.route}>
+            <StyledLink key={link.title} href={link.route}>
               {link.title}
             </StyledLink>
           ))}
