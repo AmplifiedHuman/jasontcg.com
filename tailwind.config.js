@@ -1,6 +1,11 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  purge: ['./src/**/*.js'],
+  purge: {
+    content: ['./src/**/*.js'],
+    options: {
+      whitelist: ['bg-blue-200', 'bg-indigo-200'],
+    },
+  },
   theme: {},
   variants: {},
   // https://github.com/tailwindcss/custom-forms

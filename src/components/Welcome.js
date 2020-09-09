@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import {StyledHeader, StyledParagraph} from './Font'
+import { StyledHeader, StyledParagraph } from './Font';
 
 // styled components
 const StyledWelcome = styled.div.attrs({
@@ -18,7 +18,7 @@ const StyledLinkWrapper = styled.div.attrs({
 
 const StyledLink = styled.a.attrs({
   className:
-    'my-1 bg-transparent hover:bg-blue-800 text-blue-800 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full mr-2',
+    'my-1 bg-transparent transform hover:-translate-y-1 transition duration-300 ease-in-out hover:bg-blue-800 text-blue-800 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full mr-2',
 })``;
 
 const Welcome = () => {
@@ -50,7 +50,12 @@ const Welcome = () => {
       <StyledParagraph>{descJson.status}</StyledParagraph>
       <StyledLinkWrapper>
         {allLinksJson.edges.map(({ node }) => (
-          <StyledLink href={node.link} key={node.type}>
+          <StyledLink
+            href={node.link}
+            key={node.type}
+            target='_blank'
+            rel='noreferrer'
+          >
             {node.type}
           </StyledLink>
         ))}

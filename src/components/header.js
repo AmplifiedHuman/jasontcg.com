@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import 'hover.css';
 
 // styled components
 const StyledHeader = styled.header.attrs({
@@ -14,7 +13,7 @@ const StyledHeaderContainer = styled.div.attrs({
 })``;
 
 const StyledLink = styled(Link).attrs({
-  className: 'block mt-4 no-underline md:inline-block md:mt-0 md:ml-6',
+  className: 'block mt-4 no-underline md:inline-block md:mt-0 md:ml-6 transition duration-300 hover:text-blue-500',
 })``;
 
 const StyledNav = styled.nav.attrs({
@@ -53,7 +52,10 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderContainer>
-        <Link to='/' className='hover:text-black hvr-grow'>
+        <Link
+          to='/'
+          className='hover:text-black transition hover:scale-110 transform duration-300'
+        >
           <h1 className='text-2xl'>{site.siteMetadata.title}</h1>
         </Link>
 
