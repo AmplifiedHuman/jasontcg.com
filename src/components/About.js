@@ -41,7 +41,7 @@ const About = () => {
         />
         <StyledDescription>
           <h2 className='text-2xl text-gray-800 font-bold'>
-            A little bit about <span className='text-indigo-400'>myself</span>
+            A little bit about <span className='text-indigo-600'>myself</span>
           </h2>
           <p className='mt-4 text-gray-700 leading-relaxed'>
             {data.descJson.about}

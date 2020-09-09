@@ -20,7 +20,7 @@ const StyledProjectHeader = styled.div.attrs({
 })``;
 
 const StyledProjectDescription = styled.p.attrs({
-  className: 'text-sm text-gray-600 mt-2 mb-8 flex-grow',
+  className: 'text-sm text-gray-700 mt-2 mb-8 flex-grow',
 })``;
 
 const StyledTopicsContainer = styled.div.attrs({
@@ -59,6 +59,7 @@ const ProjectCard = ({ project }) => {
             className='flex hover:opacity-50 hover:text-black transition duration-300'
             target='_blank'
             rel='noreferrer'
+            aria-label='Github Link'
           >
             <h2>{project.name}</h2>
             <img
@@ -66,6 +67,7 @@ const ProjectCard = ({ project }) => {
               width='25'
               height='25'
               className='my-0 ml-2 opacity-75'
+              alt='Github Logo'
             />
           </a>
           {project.homepageUrl && (
@@ -73,6 +75,7 @@ const ProjectCard = ({ project }) => {
               href={project.homepageUrl}
               target='_blank'
               rel='noreferrer'
+              aria-label='Live Webiste Link'
               className='hover:text-black transition duration-300'
             >
               <svg

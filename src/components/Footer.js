@@ -14,7 +14,8 @@ const Footer = () => {
       allLinksJson {
         edges {
           node {
-            link
+            link,
+            type
           }
         }
       }
@@ -41,6 +42,7 @@ const Footer = () => {
                   className='m-2 hover:opacity-50 transition duration-300'
                   width='20px'
                   height='20px'
+                  alt={node.type}
                 />
               </a>
             );

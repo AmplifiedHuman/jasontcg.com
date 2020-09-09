@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -40,16 +40,6 @@ const Header = () => {
       title: `Contact`,
     },
   ];
-  // static query
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
 
   return (
     <StyledHeader>
@@ -58,7 +48,7 @@ const Header = () => {
           to='/'
           className='hover:text-black transition hover:scale-110 transform duration-300'
         >
-          <h1 className='text-2xl'>{site.siteMetadata.title}</h1>
+          <h1 className='text-2xl'>Jason 🐳</h1>
         </Link>
 
         <button

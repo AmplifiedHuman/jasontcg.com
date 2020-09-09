@@ -5,8 +5,8 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Jason 🐳`,
-    description: `A personal website developed using Gatsby`,
+    title: `Jason Tee`,
+    description: `Jason Tee's personal website developed using Gatsby.js`,
     author: `Jason Tee`,
   },
   plugins: [
@@ -21,7 +21,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.black,
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/favicon.png`,
       },
     },
     {
